@@ -1,7 +1,7 @@
 
 .topbar {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     padding: 15px;
     background-color: #333;  
     margin: auto;
@@ -15,6 +15,8 @@
     display: flex;        
     gap: 15px;   
     font-size: small;
+    align-items: center;
+ 
   }
 
 
@@ -32,7 +34,8 @@
 
   .topbar-lista .login{
     background-color: #3DDC97;
-
+    padding: 10px;
+    border-radius: 7px;
   }
 
   .topbar-lista .login:hover{
