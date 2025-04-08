@@ -1,0 +1,41 @@
+
+.topbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+    background-color: #333;  
+    margin: auto;
+    justify-items: center;
+    top: 0;
+
+}
+
+.topbar-lista {
+    list-style: none;        
+    display: flex;        
+    gap: 15px;   
+    font-size: small;
+  }
+
+
+  .topbar-lista li a {
+    color: white;            
+    text-decoration: none;   
+    font-weight: bold;
+    padding: 10px;
+  }
+
+
+  .topbar-lista li a:hover {
+    text-decoration: underline;
+  }
+
+  .topbar-lista .login{
+    background-color: #3DDC97;
+
+  }
+
+  .topbar-lista .login:hover{
+    background-color: #2ea370;
+
+  }
