@@ -1,0 +1,72 @@
+h1 {
+    font-size: 55px;
+    text-align: center;
+}
+.main-sobre {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 100px;
+    padding: 50px;
+}
+
+.main-sobre div {
+    background-color: rgba(175, 175, 175, 0.685);
+
+    align-items: center;
+    justify-items: center;
+}
+
+
+.main-sobre div p{
+    background-color: rgba(175, 175, 175, 0.685);
+    border-radius: 10px;
+    width: 411px;
+    height: 171px;
+    padding: 10px;
+}
+
+.main-sobre div a{
+    color: white;            
+    text-decoration: none;   
+    font-weight: bold;
+    padding: 10px;
+    background-color: #3DDC97;
+    border-radius: 10px;
+    align-self: center;
+    margin: 20px;
+
+}
+.cards-contatos {
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 50px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgba(175, 175, 175, 0.685);
+    border-radius: 10px;
+    margin: 10px 20px;
+    padding:  20px 0 20px 20px ;
+    width: 411px;
+    height: 171px;
+}
+
+
+
+.card-atendimento {
+    background-color: rgba(175, 175, 175, 0.685);
+    border-radius: 10px;
+    justify-items: center;
+    align-items: center;
+    margin: 10px 20px;
+    padding:  20px 0 20px 20px ;
+
+}
+
