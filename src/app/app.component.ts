@@ -6,7 +6,7 @@ import { FaleconoscoComponent } from './componentes/faleconosco/faleconosco.comp
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TopBarComponent,FooterComponent],
+  imports: [RouterOutlet, TopBarComponent,FooterComponent, FaleconoscoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
