@@ -1,0 +1,82 @@
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 8%;
+    background: #ffffff;
+    flex-wrap: wrap;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .hero-text h1 strong{
+    font-weight: 900;
+  }
+  
+  .btn-suporte {
+    align-self: center;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .info {
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 400px;
+    font-size: 0.9rem;
+  }
+  
+  .hero-img img {
+    width: 200px;
+  }
+  
+  .section-suporte {
+    text-align: center;
+    padding: 3rem 8%;
+  }
+  
+  .section-suporte h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-items: center;
+  }
+  
+  .card {
+    background: #ffffff;
+    border: 1px solid #c1f2db;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    width: 410px;
+  }
+  
+  .card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .card ul li {
+    margin-bottom: 0.4rem;
+  }
+  
