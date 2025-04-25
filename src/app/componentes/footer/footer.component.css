@@ -21,4 +21,6 @@
 
 .div-master a {
     display: block;
+    text-decoration: none;
+    color: #4b4b4b ;
 }
