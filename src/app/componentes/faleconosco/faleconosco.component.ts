@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './faleconosco.component.css'
 })
 export class FaleconoscoComponent {
-
+  
 }
