@@ -1,0 +1,276 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background-color: #F5F5F5;
+}
+
+.secao-destaque {
+  background: #F5F5F5;
+  padding: 60px 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.coluna-esquerda .texto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 100px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.texto h1 {
+  font-size: 5rem;
+  color: #222;
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.realce {
+  font-size: 5rem;
+  color: #32d399;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+.btn {
+  background-color: #4be59d;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn:hover {
+  background-color: #39cc8c;
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.esquerda-coluna img {
+  width: 400px;
+  max-width: 100%;
+}
+
+.sessao-cards {
+  background-color: #F5F5F5;
+  padding: 60px 20px;
+}
+
+.cabecalho-dos-cards h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.cards-subtitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #222;
+  margin-top: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.cards-container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: stretch;
+}
+
+.card-esquerda {
+  flex: 1;
+  display: flex;
+}
+
+.card-esquerda img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lista-de-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: stretch;
+}
+
+.card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #32d399;
+}
+
+.card p {
+  color: #666;
+}
+
+.recebimento-secao {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #F5F5F5;
+}
+
+.recebimento-titulo {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.recebimento-subtitulo {
+  margin-bottom: 40px;
+  color: #666;
+  font-size: 20px;
+}
+
+.recebimento-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recebimento-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recebimento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.card-top-indicator {
+  height: 5px;
+  background-color: #32d399;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.recebimento-card h3 {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.recebimento-card span {
+  color: #32d399;
+  font-size: 2rem;
+}
+
+.card-sub {
+  margin-top: 10px;
+  color: #666;
+}
+
+.conquista-section {
+  padding: 60px 20px;
+  background: #F5F5F5;
+}
+
+.conquista-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.conquista-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.conquista-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.conquista-texto p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .cards-container,
+  .conquista-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .coluna-esquerda .texto {
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .lista-de-cards {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card {
+    height: auto;
+  }
+}
