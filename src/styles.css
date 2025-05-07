@@ -1,13 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset básico e fonte padrão */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: yu gothic;
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6e6;
+}
