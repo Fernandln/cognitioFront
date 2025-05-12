@@ -1,8 +1,16 @@
+.logo img {
+  height: 30px;         
+  max-width: 100%;      
+  width: auto;         
+  display: block;
+  object-fit: contain;  
+}
+
 
 .topbar {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    padding: 15px;
+    padding: 0px;
     background-color: #333;  
     margin: auto;
     justify-items: center;

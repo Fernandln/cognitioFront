@@ -1,4 +1,4 @@
-/* Reset e estilo base */
+
 * {
   box-sizing: border-box;
 }
@@ -12,19 +12,17 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
-  overflow-x: hidden; /* evita overflow horizontal */
+  overflow-x: hidden; 
 }
-
-/* Container principal */
+/* cont_principal  */
 .container {
   text-align: center;
-  margin: 0 auto 76px; /* Espaço de 2cm abaixo */
+  margin: 0 auto 76px; 
   padding: 0 20px;
   max-width: 1200px;
   width: 100%;
 }
-
-/* Título principal */
+/* titulo_principal */
 h1 {
   font-size: 4.5rem;
   font-weight: 400;
@@ -45,13 +43,11 @@ h1 {
   max-width: 800px;
   margin: 0 auto;
 }
-
-/* Seção Família Cognitio */
 .familia {
   width: 100%;
   max-width: 1200px;
   text-align: center;
-  margin: 0 auto 76px; /* Espaço de 2cm abaixo */
+  margin: 0 auto 76px; /*dei espaco para baixo*/
   position: relative;
   padding: 100px 20px 60px;;
 }
@@ -106,10 +102,9 @@ h1 {
   color: #333;
 }
 
-/* Mascote ajustado */
 .personagem {
   position: absolute;
-  right: clamp(40px, 5vw, 82px); /* próximo ao último card */
+  right: clamp(40px, 5vw, 82px); /* pra ficar mais proximo ao ultimo card */
   top: clamp( 20px, -50vw, -40px); /* mais acima sem overflow */
   width: 220px;
   max-width: 100%;
@@ -119,14 +114,13 @@ h1 {
   pointer-events: none;
 }
 
-/* Seção História */
 .historia {
   width: 100%;
   background-color: #e6e6e6;
   padding: 60px 20px;
   display: flex;
   justify-content: center;
-  margin-bottom: 76px; /* Espaço de 2cm abaixo */
+  margin-bottom: 76px; /* tirei 4 px pra ficar um pouco mais pra baixo */
 }
 
 .historia-container {
@@ -175,7 +169,7 @@ h1 {
   font-weight: bold;
 }
 
-/* Seção CEOs */
+
 .ceos {
   background-color: #e6e6e6;
   padding: 60px 20px;
@@ -224,7 +218,6 @@ h1 {
   cursor: default;
 }
 
-/* Responsividade */
 @media (max-width: 1024px) {
   h1 {
     font-size: 3rem;
@@ -238,8 +231,8 @@ h1 {
     width: 180px;
   }
 
-  .historia-container {
-    gap: 20px;
+ .historia-container {
+  gap: 20px;
   }
 }
 
