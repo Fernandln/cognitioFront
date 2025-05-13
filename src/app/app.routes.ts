@@ -5,6 +5,8 @@ import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component'
 import { IndexComponent } from './componentes/index/index.component';
 import { LobbyComponent } from './componentes/lobby/lobby.component';
 import { BibliotecaComponent } from './componentes/biblioteca/biblioteca.component';
+import { SobreComponent } from './componentes/sobre/sobre.component';
+import { AreaprofesssorComponent } from './componentes/areaprofesssor/areaprofesssor.component';
 
 export const routes: Routes = [
     {path: '', component: IndexComponent},
@@ -13,6 +15,14 @@ export const routes: Routes = [
     {path: 'lobby', component: LobbyComponent},
     {path: 'Cadastrar', component: CadastrarComponent},
     {path: 'biblioteca', component: BibliotecaComponent},
-
+    { path: 'areaprofesssor', component: AreaprofesssorComponent },
+    { path: 'Sobre', component: SobreComponent }
 
 ];
+
+
+
+      
+    
+
+

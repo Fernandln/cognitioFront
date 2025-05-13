@@ -3,6 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { TopBarComponent } from './componentes/top-bar/top-bar.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { FaleconoscoComponent } from './componentes/faleconosco/faleconosco.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { AreaprofesssorComponent } from './componentes/areaprofesssor/areaprofesssor.component';
 
 @Component({
   selector: 'app-root',

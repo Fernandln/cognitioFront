@@ -1,0 +1,280 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  overflow-x: hidden; 
+}
+/* cont_principal  */
+.container {
+  text-align: center;
+  margin: 0 auto 76px; 
+  padding: 0 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+/* titulo_principal */
+h1 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.box {
+  background: linear-gradient(to bottom right, #f2f2f2, #dcdcdc);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.familia {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto 76px; /*dei espaco para baixo*/
+  position: relative;
+  padding: 100px 20px 60px;;
+}
+
+.familia h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.estatisticas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: linear-gradient(to bottom right, #f2f2f2, #dcdcdc);
+  padding: 30px;
+  border-radius: 15px;
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card::before {
+  content: '';
+  width: 30px;
+  height: 5px;
+  background: #00ffcc;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.numero {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.texto {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.personagem {
+  position: absolute;
+  right: clamp(40px, 5vw, 82px); /* pra ficar mais proximo ao ultimo card */
+  top: clamp( 20px, -50vw, -40px); /* mais acima sem overflow */
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.historia {
+  width: 100%;
+  background-color: #e6e6e6;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 76px; /* tirei 4 px pra ficar um pouco mais pra baixo */
+}
+
+.historia-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.historia-esquerda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  text-align: center;
+}
+
+.historia-esquerda h2 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.historia-esquerda img {
+  width: 200px;
+  height: auto;
+  margin-top: 5px;
+}
+
+.historia-direita {
+  flex: 1;
+  max-width: 600px;
+}
+
+.historia-direita p {
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.historia-direita strong {
+  font-weight: bold;
+}
+
+
+.ceos {
+  background-color: #e6e6e6;
+  padding: 60px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.ceos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.ceo-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.ceo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ceo-card img {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.ceo-card button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #aefae3;
+  border: 2px solid #00ffcc;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: default;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .box {
+    font-size: 1.2rem;
+  }
+
+  .personagem {
+    width: 180px;
+  }
+
+ .historia-container {
+  gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .historia-esquerda,
+  .historia-direita {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .historia-direita p {
+    text-align: center;
+  }
+
+  .ceo-card img {
+    width: 120px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .box {
+    font-size: 1rem;
+    padding: 15px 20px;
+  }
+
+  .ceo-card button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

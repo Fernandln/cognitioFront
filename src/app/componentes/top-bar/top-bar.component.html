@@ -1,11 +1,13 @@
-<div class="topbar" >
+<div class="topbar">
     <ul class="topbar-lista">
-        <li><a href="">LOGO</a></li>
-        <li><a href="/lobby">Home</a></li>
-        <li><a href="/">Sobre</a></li>
+      <li class="logo">
+        <a href="/"> <img src="imagens/logo (2).png" alt="Logo" /></a>
+      </li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/Sobre">Sobre</a></li>
         <li><a href="/faleconosco">Fale Conosco</a></li>
-        <li><a href="/biblioteca">Área de membros</a></li>
-
+        <li><a href="">Área de membros</a></li>
+        
     </ul>
     <ul class="topbar-lista">
         <li *ngIf="!(isLoggedIn$ | async)"><a href="/Cadastrar">Cadastre-se</a></li>

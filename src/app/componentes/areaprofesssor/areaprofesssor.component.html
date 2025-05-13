@@ -1,0 +1,88 @@
+<div class="layout">
+  <aside>
+    <h2>Cognitio Painel</h2>
+    <nav>
+      <a href="#">Painel</a>
+      <a href="#">Meus Cursos</a>
+      <a href="#">Estatísticas</a>
+      <a href="#">Financeiro</a>
+      <a href="#">Configurações</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="topo-painel">
+      <h1>Bem-vindo, Professor</h1>
+      <button class="botao-enviar" onclick="mostrarFormulario()" >+ Enviar Novo Curso</button>
+   </div><!-- < tem q que criar component do formulario -->
+
+    <div class="formulario-envio" style="display: none;">
+      <h2>Novo Curso</h2>
+      <form action="/enviar-curso" method="POST">
+        <p>
+          <label for="titulo">Título:</label><br />
+          <input type="text" id="titulo" name="titulo" required />
+        </p>
+
+        <p>
+          <label for="link">Link do YouTube:</label><br />
+          <input type="url" id="link" name="link" required />
+        </p>
+
+        <p>
+          <label for="conteudo">Conteúdo:</label><br />
+          <textarea id="conteudo" name="conteudo" rows="4" required></textarea>
+        </p>
+
+        <p>
+          <label for="valor">Valor (R$):</label><br />
+          <input type="number" id="valor" name="valor" step="0.01" required />
+        </p>
+
+        <p>
+          <button type="submit">Enviar</button>
+        </p>
+      </form>
+    </div>
+
+    <div class="conteudo-direita">
+      <div class="estatisticas">
+        <div class="caixa-estatistica">
+          <h3>Total de Cursos</h3>
+          <p>4</p>
+        </div>
+        <div class="caixa-estatistica">
+          <h3>Total de Visualizações</h3>
+          <p>1000</p>
+        </div>
+        <div class="caixa-estatistica">
+          <h3>Ganhos (R$)</h3>
+          <p>1000</p>
+        </div>
+      </div>
+
+      <div class="cartoes-video">
+        <div class="cartao-video">
+          <iframe src="https://www.youtube.com/embed/wC_mwNUT48s" frameborder="0" allowfullscreen></iframe>
+          <h4>Curso de Python</h4>
+          <p>Curso introdutório para iniciantes em programação.</p>
+        </div>
+        <div class="cartao-video">
+          <iframe src="https://www.youtube.com/embed/0Noe18EqxGM" frameborder="0" allowfullscreen></iframe>
+          <h4>Excel Profissional</h4>
+          <p>Técnicas de produtividade com planilhas avançadas.</p>
+        </div>
+        <div class="cartao-video">
+          <iframe src="https://www.youtube.com/embed/ice_xL6x4Qg" frameborder="0" allowfullscreen></iframe>
+          <h4>Marketing Digital</h4>
+          <p>Aprenda estratégias modernas de marketing online.</p>
+        </div>
+        <div class="cartao-video">
+          <iframe src="https://www.youtube.com/embed/qpee2V-HNC0" frameborder="0" allowfullscreen></iframe>
+          <h4>Design Gráfico</h4>
+          <p>Fundamentos do design visual com ferramentas práticas.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
