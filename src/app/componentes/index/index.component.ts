@@ -4,7 +4,7 @@ import { FooterComponent } from "../footer/footer.component";
 
 @Component({
   selector: 'app-index',
-  imports: [TopBarComponent, FooterComponent],
+  imports: [],
   templateUrl: './index.component.html',
   styleUrl: './index.component.css'
 })
