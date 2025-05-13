@@ -4,6 +4,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { CadastrarComponent } from './componentes/cadastrar/cadastrar.component';
 import { IndexComponent } from './componentes/index/index.component';
 import { LobbyComponent } from './componentes/lobby/lobby.component';
+import { BibliotecaComponent } from './componentes/biblioteca/biblioteca.component';
 
 export const routes: Routes = [
     {path: '', component: IndexComponent},
@@ -11,6 +12,7 @@ export const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'lobby', component: LobbyComponent},
     {path: 'Cadastrar', component: CadastrarComponent},
+    {path: 'biblioteca', component: BibliotecaComponent},
 
 
 ];
