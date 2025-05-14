@@ -9,13 +9,15 @@ import { Component } from '@angular/core';
   styleUrl: './biblioteca.component.css'
 })
 export class BibliotecaComponent{
+  imcomplete: any[] = [];
+  
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.http.get<any[]>('https://jsonplaceholder.typicode.com/todos/')
       .subscribe(response => {
-        const incomplete = response.filter((todo => todo.completed));
-        console.log(incomplete);
+        this.imcomplete = response.filter((todo => todo.completed));
+        console.log(this.imcomplete);
       });
         
     } 

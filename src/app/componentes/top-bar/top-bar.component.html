@@ -6,14 +6,14 @@
         <li><a href="/">Home</a></li>
         <li><a href="/Sobre">Sobre</a></li>
         <li><a href="/faleconosco">Fale Conosco</a></li>
-        <li><a href="">Área de membros</a></li>
+        <li><a href="/biblioteca">Área de membros</a></li>
         
     </ul>
     <ul class="topbar-lista">
         <li *ngIf="!(isLoggedIn$ | async)"><a href="/Cadastrar">Cadastre-se</a></li>
         <li *ngIf="!(isLoggedIn$ | async)" class="login"><a href="/login">Login</a></li>
         <li *ngIf="isLoggedIn$ | async">
-          <a href="#" (click)="onLogout()">Logout</a>
+          <a href="#" (click)="logout()">Logout</a>
         </li>
     </ul>
 </div>

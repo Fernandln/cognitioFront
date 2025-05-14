@@ -10,17 +10,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './top-bar.component.css'
 })
 export class TopBarComponent {
-  // isLoggedIn$: Observable<boolean>
+ isLoggedIn$: Observable<boolean>;
 
-  // constructor(private authService: AuthService) {
-  //   this.isLoggedIn$ = this.authService.loggedIn$;
-
-  // }
-
-  isLoggedIn$ = of(false);
-
-  onLogout() {
-    // this.authService.logout();
-    console.log("logout clicado")
+  constructor(private authService: AuthService) {
+    this.isLoggedIn$ = this.authService.isLoggedIn$
   }
+
+  logout() {
+    this.authService.logout();
+  }
+
 }
