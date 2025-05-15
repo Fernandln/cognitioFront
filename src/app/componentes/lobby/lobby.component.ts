@@ -1,6 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { GetUsersService } from '../../servicos/get-users.service';
 import { CommonModule } from '@angular/common';
+import { CursoService, CursoResponse } from '../../servicos/curso.service';
 
 interface User {
   name: string;
@@ -15,12 +16,34 @@ interface User {
 
 
 export class LobbyComponent implements OnInit {
-  private getUsersService = inject(GetUsersService);
-  public users: User[] = [];
+  cursos: any[] = [];
+  paginaAtual = 0;
+  totalPaginas = 0;
+
+  constructor(private cursoService: CursoService) {}
 
   ngOnInit() {
-    this.getUsersService.getData().subscribe((response: User[]) => {
-      this.users = response;
+    this.carregarCursos();
+  }
+
+  carregarCursos() {
+    this.cursoService.getCursos(this.paginaAtual).subscribe((res: CursoResponse) => {
+      this.cursos = res.content;
+      this.totalPaginas = res.totalPages;
     });
+  }
+
+  paginaAnterior() {
+    if (this.paginaAtual > 0) {
+      this.paginaAtual--;
+      this.carregarCursos();
+    }
+  }
+
+  proximaPagina() {
+    if (this.paginaAtual + 1 < this.totalPaginas) {
+      this.paginaAtual++;
+      this.carregarCursos();
+    }
   }
 }
