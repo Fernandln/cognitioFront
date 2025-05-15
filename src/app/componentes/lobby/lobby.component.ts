@@ -1,49 +1,50 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { GetUsersService } from '../../servicos/get-users.service';
 import { CommonModule } from '@angular/common';
-import { CursoService, CursoResponse } from '../../servicos/curso.service';
+import { CursoService } from '../../servicos/curso.service';
 
-interface User {
-  name: string;
-  email: string;
-}
 @Component({
   selector: 'app-lobby',
-  imports: [CommonModule],
+  imports: [CommonModule,],
   templateUrl: './lobby.component.html',
   styleUrl: './lobby.component.css'
 })
 
 
-export class LobbyComponent implements OnInit {
+export class LobbyComponent  {
+  private cursoService = inject(CursoService);
   cursos: any[] = [];
-  paginaAtual = 0;
-  totalPaginas = 0;
+  pagina = 1;
+  porPagina = 4;
 
-  constructor(private cursoService: CursoService) {}
+  get cursosPaginados() {
+    const start = (this.pagina - 1) * this.porPagina;
+    return this.cursos.slice(start, start + this.porPagina);
+  }
 
   ngOnInit() {
-    this.carregarCursos();
+    this.cursoService.getCursos().subscribe(data => (this.cursos = data));
   }
 
-  carregarCursos() {
-    this.cursoService.getCursos(this.paginaAtual).subscribe((res: CursoResponse) => {
-      this.cursos = res.content;
-      this.totalPaginas = res.totalPages;
-    });
+  getYoutubeThumbnail(link: string): string {
+    const videoId = this.extractYoutubeId(link);
+    return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
   }
 
-  paginaAnterior() {
-    if (this.paginaAtual > 0) {
-      this.paginaAtual--;
-      this.carregarCursos();
-    }
+  extractYoutubeId(url: string): string {
+    const regExp = /(?:\?v=|\/embed\/|\.be\/)([\w\-]{11})/;
+    const match = url.match(regExp);
+    return match ? match[1] : '';
+  }
+
+  irParaCompra(id: number) {
+    window.location.href = `/compra/${id}`;
   }
 
   proximaPagina() {
-    if (this.paginaAtual + 1 < this.totalPaginas) {
-      this.paginaAtual++;
-      this.carregarCursos();
-    }
+    this.pagina++;
+  }
+
+  paginaAnterior() {
+    this.pagina--;
   }
 }

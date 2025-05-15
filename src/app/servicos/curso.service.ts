@@ -1,21 +1,19 @@
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Curso } from './curso';
 
-export interface CursoResponse {
-  content: Curso[];
-  totalPages: number;
-  number: number;
-}
-@Injectable({
-  providedIn: 'root'
-})
-export class CursoService  {
-  private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:8080/api/cursos';
+@Injectable({ providedIn: 'root' })
+export class CursoService {
+  private apiUrl = 'http://localhost:3000/cursos'; // Altere conforme necessário
 
-  getCursos(page: number = 0, size: number = 16): Observable<CursoResponse> {
-    return this.http.get<CursoResponse>(`${this.apiUrl}?page=${page}&size=${size}`);
+  constructor(private http: HttpClient) {}
+
+  getCursos(): Observable<Curso[]> {
+    return this.http.get<Curso[]>(this.apiUrl);
+  }
+
+  getCursoById(id: number): Observable<Curso> {
+    return this.http.get<Curso>(`${this.apiUrl}/${id}`);
   }
 }

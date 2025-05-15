@@ -39,13 +39,20 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <div class="cursos-container">
-    <div class="cursos" *ngFor="let user of users">
-      <img src="imagens/1.webp" alt="Images">
-      <div>{{ user.name }}</div>
-      <div>{{ user.email }}</div>
+  <div *ngFor="let curso of cursosPaginados">
+      <h2>{{ curso.nome }}</h2>
+      <p>{{ curso.descricao }}</p>
+      <div *ngIf="curso.conteudo.length">
+        <img
+          [src]="getYoutubeThumbnail(curso.conteudo[0])"
+          (click)="irParaCompra(curso.id)"
+          style="cursor: pointer"
+        />
+      </div>
     </div>
-  </div>
+
+    <button (click)="paginaAnterior()" [disabled]="pagina === 1">Anterior</button>
+    <button (click)="proximaPagina()" [disabled]="pagina * porPagina >= cursos.length">Próxima</button>
 </section>
 
 

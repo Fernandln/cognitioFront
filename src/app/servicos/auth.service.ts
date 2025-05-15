@@ -7,7 +7,7 @@ import { BehaviorSubject, firstValueFrom } from 'rxjs';
 })
 export class AuthService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:8080/api/auth'; // ajuste para sua API
+  private apiUrl = 'http://localhost:8080/'; // ajuste para sua API
 
   register(user: { nome: string, password: string, email: string, telefone: string, cpf: string, dataDeNascimento: string }) {
     return firstValueFrom(
