@@ -6,6 +6,9 @@ import { BehaviorSubject, firstValueFrom } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
+  login(username: string, password: string) {
+    throw new Error('Method not implemented.');
+  }
   private http = inject(HttpClient);
   private apiUrl = 'http://localhost:8080/'; // ajuste para sua API
 
