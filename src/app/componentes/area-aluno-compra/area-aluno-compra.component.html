@@ -1,17 +1,17 @@
-<div class="container-curso">
+<div class="container-curso"> 
   <div class="cabecalho-curso">
     <div class="info-curso">
       <h1>Manutenção de carros</h1>
       <p class="avaliacao">⭐4.95/5 <strong>Bem avaliado</strong> PT-BR</p>
-<div class="descricao-linha">
-  <div class="caixa-imagem">
-    <img src="imagens/cursocarro.jpg" alt="Imagem do curso" class="imagem-descricao" />
-  </div>
-  <p class="descricao">
-    Aprenda os fundamentos da manutenção automotiva, desde a troca de óleo até diagnósticos básicos de motor.
-    Ideal para iniciantes e entusiastas que querem entender melhor o funcionamento do carro e economizar com pequenos reparos.
-  </p>
-</div>
+      <div class="descricao-linha">
+        <div class="caixa-imagem">
+          <img src="imagens/cursocarro.jpg" alt="Imagem do curso" class="imagem-descricao" />
+        </div>
+        <p class="descricao">
+          Aprenda os fundamentos da manutenção automotiva, desde a troca de óleo até diagnósticos básicos de motor.
+          Ideal para iniciantes e entusiastas que querem entender melhor o funcionamento do carro e economizar com pequenos reparos.
+        </p>
+      </div>
     </div>
     <div class="lado-curso">
       <div class="preco">R$29,90</div>
@@ -34,19 +34,31 @@
     <h3>Finalizar Compra</h3>
     <form>
       <label>Nome completo:</label>
-      <input type="text" />
+      <input type="text" id="nome" />
 
       <label>CPF:</label>
-      <input type="text" />
+      <input type="text" id="cpf" />
 
       <label>Número do Cartão de Crédito:</label>
-      <input type="text" />
+      <input type="text" id="cartao" />
 
       <label>Email:</label>
-      <input type="email" />
+      <input type="email" id="email" />
 
-      <label for="controle-formulario" class="botao-comprar">Finalizar Compra</label>
+      <button type="button" class="botao-comprar" (click)="finalizarCompra()">Finalizar Compra</button>
     </form>
-    <p class="mensagem-sucesso">Compra finalizada com sucesso!</p>
+
+    <!-- Bloco de mensagem condicional -->
+    <ng-container *ngIf="compraFinalizada; else naoComprou">
+      <div class="mensagem-sucesso">
+        ✅✅✅ COMPRA FINALIZADA COM SUCESSO - PARABÉNS PELA ÓTIMA ESCOLHA ✅✅✅
+      </div>
+    </ng-container>
+
+    <ng-template #naoComprou>
+      <div class="mensagem-pendente">
+        VOCÊ AINDA NAO FINALIZOU COMPRA...
+      </div>
+    </ng-template>
   </div>
 </div>

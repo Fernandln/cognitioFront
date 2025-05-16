@@ -132,12 +132,12 @@
   border: 1px solid #aaa;
 }
 
-.mensagem-sucesso {
+/* .mensagem-sucesso {
   margin-top: 15px;
   color: green;
   font-weight: bold;
   text-align: center;
-}
+} */
 
 @media (max-width: 720px) {
   .cabecalho-curso {
@@ -166,4 +166,16 @@
   .descricao {
     text-align: center;
   }
+}
+
+.mensagem-sucesso {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.mensagem-pendente {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
 }
